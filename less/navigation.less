@@ -1,15 +1,16 @@
 .nav-header-container {
+    // position: fixed;
     width: 100%;
-    height: 70px;
+    height: 60px;
     border-bottom: 1px solid @main-font;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-size: 1.4rem;
 
     .streemly-nav-logo {
         width: 20rem;
-        margin: 10px;
+        margin: 10px 20px 10px 30px;
 
         img {
             width: 100%;
@@ -18,15 +19,11 @@
 
     a {
         margin: 0px 25px;
-        color: @main-font;
+        color: @pop-font-color;
         font-weight: 100;
     }
 
-    .whitespace {
-        width: 50%;
-
-        // @media @mobile {
-        //     display: none;
-        // }
+    @media @mobile {
+        // Turn anchor tags into hamburger menu or stack them 
     }
 }
