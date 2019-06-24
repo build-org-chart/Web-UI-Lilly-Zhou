@@ -154,6 +154,19 @@ table {
 }
 @media (max-width: 500px) {
 }
+.product .product-text {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.product .product-image {
+  width: 49%;
+}
+.product .product-image img {
+  width: 100%;
+}
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
@@ -176,4 +189,10 @@ h1 {
 }
 p {
   font-size: 1.4rem;
+}
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
