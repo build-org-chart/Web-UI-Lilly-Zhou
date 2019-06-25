@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v10/zOL64pLDlL1D99S8g8PtiKchq-dmiA.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -154,6 +160,10 @@ table {
 }
 @media (max-width: 500px) {
 }
+.product p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .product .product-text {
   width: 49%;
   display: flex;
@@ -167,6 +177,29 @@ table {
 .product .product-image img {
   width: 100%;
 }
+.how-to p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.how-to .steps-list {
+  width: 100%;
+  margin: auto;
+}
+.how-to .steps-list .step {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 1.8rem 3rem;
+}
+.how-to .steps-list .step::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
+}
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
@@ -176,6 +209,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  font-size: 1.4rem;
 }
 a {
   text-decoration: none;
@@ -186,9 +220,6 @@ a {
 }
 h1 {
   font-size: 3rem;
-}
-p {
-  font-size: 1.4rem;
 }
 section {
   width: 100%;

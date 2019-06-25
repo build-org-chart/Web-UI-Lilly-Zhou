@@ -1,4 +1,10 @@
 .product {
+
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
     .product-text {
         width: 49%;
         .flex(space-around, flex-start, column)
@@ -9,6 +15,36 @@
 
         img {
             width: 100%;
+        }
+    }
+}
+
+.how-to {
+
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .steps-list {
+        width: 100%;
+        margin: auto;
+
+        .step {
+            counter-increment: my-awesome-counter;
+            display: flex;
+            width: 100%;
+            font-size: 1.4rem;
+            margin: 1.8rem 3.0rem;
+        }
+
+        .step::before {
+            content: "0" counter(my-awesome-counter);
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            font-family: 'Abril Fatface', serif;
+            line-height: 1;
         }
     }
 }
