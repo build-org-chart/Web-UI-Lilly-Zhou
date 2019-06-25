@@ -26,16 +26,20 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    padding: 8rem 12rem;
+
+    @media @mobile {
+        padding: 8rem 2rem;
+    }
+}
+
 a {
     text-decoration: none;
 
     &:hover {
         text-decoration: underline;
     }
-}
-
-.container {
-    padding: 8rem 12rem;
 }
 
 h1 {

@@ -146,6 +146,7 @@ table {
   justify-content: flex-start;
   align-items: center;
   font-size: 1.4rem;
+  background: white;
 }
 .nav-header-container .streemly-nav-logo {
   width: 20rem;
@@ -163,20 +164,28 @@ table {
 }
 .product {
   margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .product {
+    flex-direction: column;
+  }
 }
 .product p {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .product .product-text {
-  width: 49%;
+  width: 45%;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: column;
 }
 .product .product-image {
-  width: 49%;
+  width: 45%;
 }
 .product .product-image img {
   width: 100%;
@@ -216,6 +225,11 @@ table {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media (max-width: 800px) {
+  .team .cards-container {
+    flex-direction: column;
+  }
+}
 .team .cards-container .card {
   width: 25%;
   margin: 1rem;
@@ -229,11 +243,22 @@ table {
   transition: all 0.5s ease;
   box-shadow: 0 8px 6px -6px grey;
 }
+@media (max-width: 800px) {
+  .team .cards-container .card {
+    width: 60%;
+  }
+}
 .team .cards-container .card .img-container {
   margin: 2.5rem;
 }
 .team .cards-container .card .img-container img {
   width: 100%;
+}
+@media (max-width: 800px) {
+  .team .cards-container .card .img-container img {
+    display: none;
+    margin: 1rem;
+  }
 }
 .team .cards-container .card .card-info {
   width: 100%;
@@ -258,14 +283,19 @@ body {
   font-size: 1.4rem;
   line-height: 1.6;
 }
+.container {
+  padding: 8rem 12rem;
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 8rem 2rem;
+  }
+}
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-}
-.container {
-  padding: 8rem 12rem;
 }
 h1 {
   font-size: 3.2rem;

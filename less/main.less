@@ -1,5 +1,12 @@
 .product {
     margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+
+    @media @mobile {
+        flex-direction: column;
+    }
 
     p {
         margin-top: 2rem;
@@ -7,17 +14,26 @@
     }
 
     .product-text {
-        width: 49%;
+        width: 45%;
         .flex(space-around, flex-start, column)
+
+        // @media @mobile {
+        //     width: 100%;
+        // }
     }
 
     .product-image {
-        width: 49%;
+        width: 45%;
 
         img {
             width: 100%;
         }
+
+        // @media @mobile {
+        //     width: 100%;
+        // }
     }
+
 }
 
 .how-to {
@@ -62,6 +78,10 @@
         .flex(space-around, center, row);
         flex-wrap: wrap;
 
+        @media @tablet {
+            flex-direction: column;
+        }
+
         .card {
             width: 25%;
             margin: 1rem;
@@ -75,11 +95,20 @@
             transition: all 0.5s ease;
             box-shadow: 0 8px 6px -6px grey;
 
+            @media @tablet {
+                width: 60%;
+            }
+
             .img-container {
                 margin: 2.5rem;
 
                 img {
                     width: 100%;
+
+                    @media @tablet {
+                        display: none;
+                        margin: 1rem;
+                    }
                 }
             }
 
