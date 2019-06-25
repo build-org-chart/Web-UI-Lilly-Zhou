@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v10/zOL64pLDlL1D99S8g8PtiKchq-dmiA.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -132,9 +138,10 @@ table {
   border-spacing: 0;
 }
 .nav-header-container {
+  position: fixed;
   width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #36393F;
+  padding-top: 2rem;
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -154,12 +161,19 @@ table {
 }
 @media (max-width: 500px) {
 }
+.product {
+  margin-bottom: 3rem;
+}
+.product p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .product .product-text {
   width: 49%;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .product .product-image {
   width: 49%;
@@ -167,32 +181,100 @@ table {
 .product .product-image img {
   width: 100%;
 }
+.how-to p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.how-to .steps-list {
+  width: 100%;
+  margin: auto;
+}
+.how-to .steps-list .step {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 1.8rem 3rem;
+}
+.how-to .steps-list .step::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
+}
+.team h1 {
+  text-align: center;
+}
+.team .cards-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team .cards-container .card {
+  width: 25%;
+  margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: space-between;
+  border-radius: 30px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 6px -6px grey;
+}
+.team .cards-container .card .img-container {
+  margin: 2.5rem;
+}
+.team .cards-container .card .img-container img {
+  width: 100%;
+}
+.team .cards-container .card .card-info {
+  width: 100%;
+  text-align: center;
+}
+.team .cards-container .card .title {
+  font-size: 1rem;
+}
+.team .cards-container .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 6px -6px #DB6450;
+}
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #36393F;
 }
 body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 .container {
-  max-width: 900px;
-  margin: 10px auto;
+  padding: 8rem 12rem;
 }
 h1 {
-  font-size: 3rem;
-}
-p {
-  font-size: 1.4rem;
+  font-size: 3.2rem;
 }
 section {
   width: 100%;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }

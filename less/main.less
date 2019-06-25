@@ -1,10 +1,14 @@
 .product {
+    margin-bottom: 3rem;
+
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
     .product-text {
         width: 49%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: space-around;
+        .flex(space-around, flex-start, column)
     }
 
     .product-image {
@@ -12,6 +16,86 @@
 
         img {
             width: 100%;
+        }
+    }
+}
+
+.how-to {
+
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .steps-list {
+        width: 100%;
+        margin: auto;
+
+        .step {
+            counter-increment: my-awesome-counter;
+            display: flex;
+            width: 100%;
+            font-size: 1.4rem;
+            margin: 1.8rem 3.0rem;
+        }
+
+        .step::before {
+            content: "0" counter(my-awesome-counter);
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            font-family: 'Abril Fatface', serif;
+            line-height: 1;
+        }
+    }
+}
+
+.team {
+
+    h1 {
+        text-align: center;
+    }
+
+    .cards-container {
+        width: 100%;
+        margin: 0 auto;
+        .flex(space-around, center, row);
+        flex-wrap: wrap;
+
+        .card {
+            width: 25%;
+            margin: 1rem;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: space-between;
+            border-radius: 30px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            box-shadow: 0 8px 6px -6px grey;
+
+            .img-container {
+                margin: 2.5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-info {
+                width: 100%;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 1.0rem;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 6px -6px @pop-font-color;
+            }
         }
     }
 }
