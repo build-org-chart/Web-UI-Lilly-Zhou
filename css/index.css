@@ -138,6 +138,7 @@ table {
   border-spacing: 0;
 }
 .nav-header-container {
+  position: fixed;
   width: 100%;
   padding-top: 2rem;
   height: 80px;
@@ -208,6 +209,7 @@ table {
 }
 .team .cards-container {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -215,12 +217,17 @@ table {
   flex-wrap: wrap;
 }
 .team .cards-container .card {
-  width: 33%;
-  margin: 0 auto;
+  width: 25%;
+  margin: 1rem;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  align-content: space-between;
+  align-items: space-between;
+  border-radius: 30px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 6px -6px grey;
 }
 .team .cards-container .card .img-container {
   margin: 2.5rem;
@@ -232,9 +239,16 @@ table {
   width: 100%;
   text-align: center;
 }
+.team .cards-container .card .title {
+  font-size: 1rem;
+}
+.team .cards-container .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 6px -6px #DB6450;
+}
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #36393F;
 }
 body {
@@ -247,11 +261,14 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 .container {
-  padding: 0 10rem;
+  padding: 8rem 12rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 section {
   width: 100%;

@@ -55,18 +55,25 @@
     h1 {
         text-align: center;
     }
+
     .cards-container {
         width: 100%;
+        margin: 0 auto;
         .flex(space-around, center, row);
         flex-wrap: wrap;
 
         .card {
-            width: 33%;
-            margin: 0 auto;
+            width: 25%;
+            margin: 1rem;
+            padding: 2rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-direction: column;
-            align-content: space-between;
+            align-items: space-between;
+            border-radius: 30px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            box-shadow: 0 8px 6px -6px grey;
 
             .img-container {
                 margin: 2.5rem;
@@ -81,8 +88,13 @@
                 text-align: center;
             }
 
-            .card-info:hover {
+            .title {
+                font-size: 1.0rem;
+            }
 
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 6px -6px @pop-font-color;
             }
         }
     }

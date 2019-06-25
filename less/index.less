@@ -13,7 +13,8 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    font-family: @raleway;
     color: @main-font;
 }
 
@@ -27,14 +28,19 @@ body {
 
 a {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .container {
-    padding: 0 10rem;
+    padding: 8rem 12rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
+
 }
 
 section {
@@ -42,3 +48,4 @@ section {
     margin: 10px;
     .flex(space-between, center, row);
 }
+
