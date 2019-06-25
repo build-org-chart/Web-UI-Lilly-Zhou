@@ -138,10 +138,9 @@ table {
   border-spacing: 0;
 }
 .nav-header-container {
-  background-color: #5f30c2;
   width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #5F30C2;
+  padding-top: 2rem;
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -243,13 +242,13 @@ body {
   min-width: 300px;
   margin: 0;
   font-size: 1.4rem;
+  line-height: 1.6;
 }
 a {
   text-decoration: none;
 }
 .container {
-  max-width: 900px;
-  margin: 10px auto;
+  padding: 0 10rem;
 }
 h1 {
   font-size: 3rem;
