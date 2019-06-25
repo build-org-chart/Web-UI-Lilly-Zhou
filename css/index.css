@@ -145,6 +145,7 @@ table {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
   font-size: 1.4rem;
   background: white;
 }
@@ -166,16 +167,12 @@ table {
   margin-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .product {
     flex-direction: column;
   }
-}
-.product p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 .product .product-text {
   width: 45%;
@@ -184,11 +181,22 @@ table {
   align-items: flex-start;
   flex-direction: column;
 }
+@media (max-width: 800px) {
+  .product .product-text {
+    width: 80%;
+  }
+}
 .product .product-image {
   width: 45%;
 }
 .product .product-image img {
   width: 100%;
+}
+@media (max-width: 800px) {
+  .product .product-image {
+    width: 60%;
+    margin: 4rem auto;
+  }
 }
 .how-to p {
   margin-top: 2rem;
@@ -204,6 +212,11 @@ table {
   width: 100%;
   font-size: 1.4rem;
   margin: 1.8rem 3rem;
+}
+@media (max-width: 800px) {
+  .how-to .steps-list .step {
+    margin: 0 auto;
+  }
 }
 .how-to .steps-list .step::before {
   content: "0" counter(my-awesome-counter);
@@ -245,7 +258,9 @@ table {
 }
 @media (max-width: 800px) {
   .team .cards-container .card {
-    width: 60%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.5rem;
   }
 }
 .team .cards-container .card .img-container {
@@ -257,7 +272,6 @@ table {
 @media (max-width: 800px) {
   .team .cards-container .card .img-container img {
     display: none;
-    margin: 1rem;
   }
 }
 .team .cards-container .card .card-info {
@@ -286,7 +300,7 @@ body {
 .container {
   padding: 8rem 12rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .container {
     padding: 8rem 2rem;
   }
