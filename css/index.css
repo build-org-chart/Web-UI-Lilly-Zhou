@@ -200,6 +200,34 @@ table {
   font-family: 'Abril Fatface', serif;
   line-height: 1;
 }
+.team h1 {
+  text-align: center;
+}
+.team .cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team .cards-container .card {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.team .cards-container .card .img-container {
+  margin: 5rem;
+}
+.team .cards-container .card .img-container img {
+  width: 100%;
+}
+.team .cards-container .card .card-info {
+  width: 100%;
+  text-align: center;
+}
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;

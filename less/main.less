@@ -48,3 +48,41 @@
         }
     }
 }
+
+.team {
+
+    h1 {
+        text-align: center;
+    }
+    .cards-container {
+        width: 100%;
+        .flex(space-between, center, row);
+        flex-wrap: wrap;
+
+        .card {
+            width: 30%;
+            margin: 0 auto;
+            display: flex;
+            // justify-content: space-between;
+            flex-direction: column;
+            align-content: space-between;
+
+            .img-container {
+                margin: 5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-info {
+                width: 100%;
+                text-align: center;
+            }
+
+            .card-info:hover {
+
+            }
+        }
+    }
+}
