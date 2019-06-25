@@ -157,9 +157,9 @@ table {
 .product .product-text {
   width: 49%;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .product .product-image {
   width: 49%;
@@ -192,8 +192,9 @@ p {
 }
 section {
   width: 100%;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  flex-direction: row;
 }
