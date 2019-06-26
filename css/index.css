@@ -174,7 +174,7 @@ section {
   z-index: 10;
   position: fixed;
   width: 100%;
-  padding-top: 2rem;
+  padding-top: 1.4rem;
   height: 80px;
   display: flex;
   justify-content: flex-start;
