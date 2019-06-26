@@ -141,8 +141,8 @@ body {
   min-width: 300px;
   margin: 0;
   font-size: 1.8rem;
-  line-height: 1.6;
   overflow-x: hidden;
+  line-height: 1.8;
 }
 .container {
   padding: 8rem 12rem;
@@ -154,6 +154,10 @@ body {
 }
 a {
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+a:hover {
+  transform: scale(0.9);
 }
 h1 {
   font-size: 3.3rem;
@@ -227,15 +231,28 @@ section {
 }
 .how-to .steps {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   padding-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .how-to .steps {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .how-to .steps .steps-list {
   width: 40%;
   margin: 0 auto;
   text-align: left;
+}
+@media (max-width: 800px) {
+  .how-to .steps .steps-list {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 .how-to .steps .steps-list .step {
   counter-increment: my-counter;
@@ -243,6 +260,7 @@ section {
   font-size: 1.6rem;
   margin: 0 auto;
   width: 100%;
+  padding-bottom: 20px;
 }
 @media (max-width: 800px) {
   .how-to .steps .steps-list .step {
@@ -265,6 +283,11 @@ section {
   flex-direction: row;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  .how-to .steps .carousel {
+    width: 100%;
+  }
+}
 .how-to .steps .carousel .left-button,
 .how-to .steps .carousel .right-button {
   display: flex;
@@ -278,7 +301,7 @@ section {
   padding: 10px;
 }
 .how-to .steps .carousel img {
-  width: 100%;
+  width: 80%;
   display: none;
   padding-right: 10px;
   padding-left: 10px;
@@ -287,15 +310,16 @@ section {
   display: block;
 }
 .product {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 @media (max-width: 800px) {
   .product {
     flex-direction: column;
+    justify-content: center;
   }
 }
 .product .product-text {
@@ -307,7 +331,7 @@ section {
 }
 @media (max-width: 800px) {
   .product .product-text {
-    width: 80%;
+    width: 100%;
   }
 }
 .product .product-image {

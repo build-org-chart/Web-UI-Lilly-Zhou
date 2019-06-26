@@ -19,13 +19,25 @@
   }
 
   .steps {
-    .flex(center, center, row);
+    .flex(space-around, center, row);
+    // flex-wrap: wrap;
     padding-bottom: 10px;
+
+    @media @tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .steps-list {
       width: 40%;
       margin: 0 auto;
       text-align: left;
+
+      @media @tablet {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
   
       .step {
         counter-increment: my-counter;
@@ -34,6 +46,7 @@
         font-size: 1.6rem;
         margin: 0 auto;
         width: 100%;
+        padding-bottom: 20px;
   
         @media @tablet {
           margin: 0 auto;
@@ -55,6 +68,10 @@
       .flex(space-between, center, row);
       margin: 0 auto;
 
+      @media @tablet {
+        width: 100%;
+      }
+
       .left-button,
       .right-button {
         .flex(center, center);
@@ -67,7 +84,7 @@
       }
 
       img {
-        width: 100%;
+        width: 80%; //rule with images and being within a div container?
         display: none;
         padding-right: 10px;
         padding-left: 10px;
@@ -82,14 +99,15 @@
 
 // ANOTHER MARKETING HEADER
 .product {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 
   @media @tablet {
     flex-direction: column;
+    justify-content: center;
   }
 
   .product-text {
@@ -97,7 +115,7 @@
     .flex(space-around, flex-start, column);
 
     @media @tablet {
-      width: 80%;
+      width: 100%;
     }
   }
 
