@@ -150,11 +150,11 @@ table {
   font-size: 1.4rem;
   background: white;
 }
-.nav-header-container .streemly-nav-logo {
+.nav-header-container .nav-logo {
   width: 20rem;
   margin: 10px 20px 10px 30px;
 }
-.nav-header-container .streemly-nav-logo img {
+.nav-header-container .nav-logo img {
   width: 100%;
 }
 .nav-header-container a {
@@ -162,7 +162,7 @@ table {
   color: #DB6450;
   font-weight: 100;
 }
-.nav-header-container button {
+.nav-header-container .login-button {
   padding: 8px;
   font-family: "Raleway", sans-serif;
   color: white;
@@ -171,7 +171,7 @@ table {
   border: none;
   margin: 0px 25px;
 }
-.nav-header-container button:hover {
+.nav-header-container .login-button:hover {
   color: #DB6450;
   background-color: white;
   border: 1px solid #DB6450;
