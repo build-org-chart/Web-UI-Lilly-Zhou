@@ -1,39 +1,9 @@
-.product {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  @media @tablet {
-    flex-direction: column;
-  }
-
-  .product-text {
-    width: 45%;
-    .flex(space-around, flex-start, column);
-
-    @media @tablet {
-      width: 80%;
-    }
-  }
-
-  .product-image {
-    width: 45%;
-
-    img {
-      width: 100%;
-    }
-
-    @media @tablet {
-      width: 60%;
-      margin: 4rem auto;
-    }
-  }
-}
-
+// HOW TO/STEPS TO USE APP
 .how-to {
   background-color: lighten(@pop-font-color, 35%);
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   &::before {
     //Henry's hack: pseudoelement - place styling on elements that don't exist in html
@@ -110,65 +80,37 @@
   }
 }
 
-.team {
-  h1 {
-    text-align: center;
+// ANOTHER MARKETING HEADER
+.product {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media @tablet {
+    flex-direction: column;
   }
 
-  .cards-container {
-    width: 100%;
-    margin: 0 auto;
-    .flex(space-around, center, row);
-    flex-wrap: wrap;
+  .product-text {
+    width: 45%;
+    .flex(space-around, flex-start, column);
 
     @media @tablet {
-      flex-direction: column;
+      width: 80%;
+    }
+  }
+
+  .product-image {
+    width: 45%;
+
+    img {
+      width: 100%;
     }
 
-    .card {
-      width: 25%;
-      margin: 1rem;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: space-between;
-      border-radius: 30px;
-      transform-style: preserve-3d;
-      transition: all 0.5s ease;
-      box-shadow: 0 8px 6px -6px grey;
-
-      @media @tablet {
-        width: 50%;
-        margin: 0 auto;
-        padding: 0.5rem;
-      }
-
-      .img-container {
-        margin: 2.5rem;
-
-        img {
-          width: 100%;
-
-          @media @tablet {
-            display: none;
-          }
-        }
-      }
-
-      .card-info {
-        width: 100%;
-        text-align: center;
-      }
-
-      .title {
-        font-size: 1rem;
-      }
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 6px -6px @pop-font-color;
-      }
+    @media @tablet {
+      width: 60%;
+      margin: 4rem auto;
     }
   }
 }

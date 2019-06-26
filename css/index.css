@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-@font-face {
-  font-family: 'Abril Fatface';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Abril Fatface'), local('AbrilFatface-Regular'), url(https://fonts.gstatic.com/s/abrilfatface/v10/zOL64pLDlL1D99S8g8PtiKchq-dmiA.ttf) format('truetype');
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -137,6 +126,46 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  color: #36393F;
+}
+body {
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.container {
+  padding: 8rem 12rem;
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 8rem 2rem;
+  }
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 3.3rem;
+}
+section {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
 .nav-header-container {
   z-index: 10;
   position: fixed;
@@ -147,8 +176,9 @@ table {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   background: white;
+  opacity: 90%;
 }
 .nav-header-container .nav-logo {
   width: 20rem;
@@ -163,6 +193,7 @@ table {
   font-weight: 100;
 }
 .nav-header-container .login-button {
+  font-size: 1.6rem;
   padding: 8px;
   font-family: "Raleway", sans-serif;
   color: white;
@@ -178,44 +209,11 @@ table {
 }
 @media (max-width: 500px) {
 }
-.product {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-@media (max-width: 800px) {
-  .product {
-    flex-direction: column;
-  }
-}
-.product .product-text {
-  width: 45%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: column;
-}
-@media (max-width: 800px) {
-  .product .product-text {
-    width: 80%;
-  }
-}
-.product .product-image {
-  width: 45%;
-}
-.product .product-image img {
-  width: 100%;
-}
-@media (max-width: 800px) {
-  .product .product-image {
-    width: 60%;
-    margin: 4rem auto;
-  }
-}
 .how-to {
   background-color: #f9e7e4;
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .how-to::before {
   content: "";
@@ -288,6 +286,42 @@ table {
 .how-to .steps .carousel img[data-step="1"] {
   display: block;
 }
+.product {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media (max-width: 800px) {
+  .product {
+    flex-direction: column;
+  }
+}
+.product .product-text {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .product .product-text {
+    width: 80%;
+  }
+}
+.product .product-image {
+  width: 45%;
+}
+.product .product-image img {
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .product .product-image {
+    width: 60%;
+    margin: 4rem auto;
+  }
+}
 .team h1 {
   text-align: center;
 }
@@ -341,47 +375,10 @@ table {
   text-align: center;
 }
 .team .cards-container .card .title {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  font-style: italic;
 }
 .team .cards-container .card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 6px -6px #DB6450;
-}
-html {
-  font-size: 62.5%;
-  font-family: "Raleway", sans-serif;
-  color: #36393F;
-}
-body {
-  box-sizing: border-box;
-  min-width: 300px;
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-.container {
-  padding: 8rem 12rem;
-}
-@media (max-width: 800px) {
-  .container {
-    padding: 8rem 2rem;
-  }
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-h1 {
-  font-size: 3.3rem;
-}
-section {
-  width: 100%;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
 }

@@ -1,56 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 @import 'reset.less';
 @import 'variables.less';
 @import 'mixins.less';
+@import 'global.less';
 @import 'navigation.less';
 @import 'main.less';
-
-html {
-    font-size: 62.5%;
-    // font-family: 'Roboto', sans-serif;
-    font-family: @raleway;
-    color: @main-font;
-}
-
-body {
-	box-sizing: border-box;
-	min-width: 300px;
-    margin: 0;
-    font-size: 1.8rem;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    padding: 8rem 12rem;
-
-    @media @tablet {
-        padding: 8rem 2rem;
-    }
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-h1 {
-    font-size: 3.3rem;
-
-}
-
-section {
-    width: 100%;
-    margin: 10px;
-    .flex(space-between, center, row);
-}
-
+@import 'about-team.less';
