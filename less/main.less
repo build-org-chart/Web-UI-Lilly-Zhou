@@ -35,7 +35,8 @@
   background-color: lighten(@pop-font-color, 35%);
   position: relative;
 
-  &::before { //Henry's hack: pseudoelement - place styling on elements that don't exist in html
+  &::before {
+    //Henry's hack: pseudoelement - place styling on elements that don't exist in html
     content: "";
     position: absolute;
     width: 200vw; //viewport width
@@ -47,34 +48,64 @@
     top: 0;
   }
 
-  p {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+  .steps {
+    .flex(center, center, row);
+    padding-bottom: 10px;
 
-  .steps-list {
-    width: 100%;
-    margin: auto;
-
-    .step {
-      counter-increment: my-awesome-counter;
-      display: flex;
-      width: 100%;
-      font-size: 1.4rem;
-      margin: 1.8rem 3rem;
-
-      @media @tablet {
+    .steps-list {
+      width: 40%;
+      margin: 0 auto;
+      text-align: left;
+  
+      .step {
+        counter-increment: my-counter;
+        display: flex;
+        width: 100%;
+        font-size: 1.6rem;
         margin: 0 auto;
+        width: 100%;
+  
+        @media @tablet {
+          margin: 0 auto;
+        }
+      }
+  
+      .step::before {
+        content: "0" counter(my-counter);
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+        font-family: "Abril Fatface", serif;
+        line-height: 1;
       }
     }
 
-    .step::before {
-      content: "0" counter(my-awesome-counter);
-      font-weight: bold;
-      font-size: 2.5rem;
-      margin-right: 1rem;
-      font-family: "Abril Fatface", serif;
-      line-height: 1;
+    .carousel {
+      width: 40%;
+      .flex(space-between, center, row);
+      margin: 0 auto;
+
+      .left-button,
+      .right-button {
+        .flex(center, center);
+        font-size: 50px;
+        border: 1px solid black;
+        // border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+      }
+
+      img {
+        width: 100%;
+        display: none;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      img[data-step="1"] {
+        display: block;
+      }
     }
   }
 }

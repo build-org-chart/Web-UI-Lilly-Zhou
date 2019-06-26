@@ -227,33 +227,66 @@ table {
   z-index: -1;
   top: 0;
 }
-.how-to p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.how-to .steps-list {
-  width: 100%;
-  margin: auto;
-}
-.how-to .steps-list .step {
-  counter-increment: my-awesome-counter;
+.how-to .steps {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+.how-to .steps .steps-list {
+  width: 40%;
+  margin: 0 auto;
+  text-align: left;
+}
+.how-to .steps .steps-list .step {
+  counter-increment: my-counter;
+  display: flex;
+  font-size: 1.6rem;
+  margin: 0 auto;
   width: 100%;
-  font-size: 1.4rem;
-  margin: 1.8rem 3rem;
 }
 @media (max-width: 800px) {
-  .how-to .steps-list .step {
+  .how-to .steps .steps-list .step {
     margin: 0 auto;
   }
 }
-.how-to .steps-list .step::before {
-  content: "0" counter(my-awesome-counter);
+.how-to .steps .steps-list .step::before {
+  content: "0" counter(my-counter);
   font-weight: bold;
   font-size: 2.5rem;
   margin-right: 1rem;
   font-family: "Abril Fatface", serif;
   line-height: 1;
+}
+.how-to .steps .carousel {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.how-to .steps .carousel .left-button,
+.how-to .steps .carousel .right-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 50px;
+  border: 1px solid black;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+}
+.how-to .steps .carousel img {
+  width: 100%;
+  display: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.how-to .steps .carousel img[data-step="1"] {
+  display: block;
 }
 .team h1 {
   text-align: center;
@@ -323,7 +356,7 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -342,7 +375,7 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
-  font-size: 3.2rem;
+  font-size: 3.3rem;
 }
 section {
   width: 100%;
