@@ -383,9 +383,6 @@ section {
     padding: 0.5rem;
   }
 }
-.team .cards-container .card .img-container {
-  margin: 2.5rem;
-}
 .team .cards-container .card .img-container img {
   width: 100%;
 }
@@ -397,6 +394,11 @@ section {
 .team .cards-container .card .card-info {
   width: 100%;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .team .cards-container .card .card-info {
+    padding: 10px;
+  }
 }
 .team .cards-container .card .title {
   font-size: 1.4rem;
