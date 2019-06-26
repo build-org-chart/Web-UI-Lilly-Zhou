@@ -261,11 +261,15 @@ section {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 @media (max-width: 800px) {
   .how-to .steps .steps-list .step {
     margin: 0 auto;
   }
+}
+.how-to .steps .steps-list .active-step {
+  color: #DB6450;
 }
 .how-to .steps .steps-list .step::before {
   content: "0" counter(my-counter);
@@ -296,9 +300,11 @@ section {
   flex-direction: row;
   font-size: 50px;
   border: 1px solid black;
-  height: 60px;
-  width: 60px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
   padding: 10px;
+  cursor: pointer;
 }
 .how-to .steps .carousel img {
   width: 80%;

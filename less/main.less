@@ -47,10 +47,15 @@
         margin: 0 auto;
         width: 100%;
         padding-bottom: 20px;
+        cursor: pointer;
   
         @media @tablet {
           margin: 0 auto;
         }
+      }
+
+      .active-step {
+        color: @pop-font-color;
       }
   
       .step::before {
@@ -77,10 +82,11 @@
         .flex(center, center);
         font-size: 50px;
         border: 1px solid black;
-        // border-radius: 50%;
-        height: 60px;
-        width: 60px;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
         padding: 10px;
+        cursor: pointer;
       }
 
       img {
