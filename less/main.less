@@ -80,23 +80,24 @@
       .left-button,
       .right-button {
         .flex(center, center);
-        font-size: 50px;
-        border: 1px solid black;
+        font-size: 25px;
+        color: white;
+        background-color: @pop-font-color;
         border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        padding: 10px;
+        height: 40px;
+        width: 40px;
+        padding: 15px;
         cursor: pointer;
       }
 
       img {
-        width: 80%; //rule with images and being within a div container?
+        width: 90%; //rule with images and being within a div container?
         display: none;
         padding-right: 10px;
         padding-left: 10px;
       }
 
-      img[data-step="1"] {
+      .active-img {
         display: block;
       }
     }
