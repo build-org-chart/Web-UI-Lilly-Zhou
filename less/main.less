@@ -69,7 +69,7 @@
     }
 
     .carousel {
-      width: 40%;
+      width: 49%;
       .flex(space-between, center, row);
       margin: 0 auto;
 
@@ -82,17 +82,22 @@
         .flex(center, center);
         font-size: 25px;
         color: white;
-        background-color: @pop-font-color;
+        background-color: lighten(@pop-font-color, 10%);
         border-radius: 50%;
         height: 40px;
         width: 40px;
         padding: 15px;
         cursor: pointer;
+
+        &:hover {
+          background-color: darken(@pop-font-color, 5%);
+        }
       }
 
       img {
         width: 90%; //rule with images and being within a div container?
         display: none;
+        height: 250px;
         padding-right: 10px;
         padding-left: 10px;
       }
