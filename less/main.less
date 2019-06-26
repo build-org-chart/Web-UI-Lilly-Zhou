@@ -1,131 +1,143 @@
 .product {
-    margin-bottom: 3rem;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media @tablet {
+    flex-direction: column;
+  }
+
+  .product-text {
+    width: 45%;
+    .flex(space-around, flex-start, column);
 
     @media @tablet {
-        flex-direction: column;
+      width: 80%;
+    }
+  }
+
+  .product-image {
+    width: 45%;
+
+    img {
+      width: 100%;
     }
 
-    .product-text {
-        width: 45%;
-        .flex(space-around, flex-start, column);
-
-        @media @tablet {
-            width: 80%;
-        }
+    @media @tablet {
+      width: 60%;
+      margin: 4rem auto;
     }
-
-    .product-image {
-        width: 45%;
-
-        img {
-            width: 100%;
-        }
-
-        @media @tablet {
-            width: 60%;
-            margin: 4rem auto;
-        }
-    }
-
+  }
 }
 
 .how-to {
+  background-color: lighten(@pop-font-color, 35%);
+  position: relative;
 
-    p {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+  &::before { //Henry's hack: pseudoelement - place styling on elements that don't exist in html
+    content: "";
+    position: absolute;
+    width: 200vw; //viewport width
+    height: 100%;
+    // background-color: green;
+    background-color: lighten(@pop-font-color, 35%);
+    left: -50%;
+    z-index: -1;
+    top: 0;
+  }
+
+  p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .steps-list {
+    width: 100%;
+    margin: auto;
+
+    .step {
+      counter-increment: my-awesome-counter;
+      display: flex;
+      width: 100%;
+      font-size: 1.4rem;
+      margin: 1.8rem 3rem;
+
+      @media @tablet {
+        margin: 0 auto;
+      }
     }
 
-    .steps-list {
-        width: 100%;
-        margin: auto;
-
-        .step {
-            counter-increment: my-awesome-counter;
-            display: flex;
-            width: 100%;
-            font-size: 1.4rem;
-            margin: 1.8rem 3.0rem;
-
-            @media @tablet {
-                margin: 0 auto;
-            }
-        }
-
-        .step::before {
-            content: "0" counter(my-awesome-counter);
-            font-weight: bold;
-            font-size: 2.5rem;
-            margin-right: 1rem;
-            font-family: 'Abril Fatface', serif;
-            line-height: 1;
-        }
+    .step::before {
+      content: "0" counter(my-awesome-counter);
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin-right: 1rem;
+      font-family: "Abril Fatface", serif;
+      line-height: 1;
     }
+  }
 }
 
 .team {
+  h1 {
+    text-align: center;
+  }
 
-    h1 {
-        text-align: center;
+  .cards-container {
+    width: 100%;
+    margin: 0 auto;
+    .flex(space-around, center, row);
+    flex-wrap: wrap;
+
+    @media @tablet {
+      flex-direction: column;
     }
 
-    .cards-container {
-        width: 100%;
+    .card {
+      width: 25%;
+      margin: 1rem;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: space-between;
+      border-radius: 30px;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease;
+      box-shadow: 0 8px 6px -6px grey;
+
+      @media @tablet {
+        width: 50%;
         margin: 0 auto;
-        .flex(space-around, center, row);
-        flex-wrap: wrap;
+        padding: 0.5rem;
+      }
 
-        @media @tablet {
-            flex-direction: column;
+      .img-container {
+        margin: 2.5rem;
+
+        img {
+          width: 100%;
+
+          @media @tablet {
+            display: none;
+          }
         }
+      }
 
-        .card {
-            width: 25%;
-            margin: 1rem;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: space-between;
-            border-radius: 30px;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease;
-            box-shadow: 0 8px 6px -6px grey;
+      .card-info {
+        width: 100%;
+        text-align: center;
+      }
 
-            @media @tablet {
-                width: 50%;
-                margin: 0 auto;
-                padding: 0.5rem;
-            }
+      .title {
+        font-size: 1rem;
+      }
 
-            .img-container {
-                margin: 2.5rem;
-
-                img {
-                    width: 100%;
-
-                    @media @tablet {
-                        display: none;
-                    }
-                }
-            }
-
-            .card-info {
-                width: 100%;
-                text-align: center;
-            }
-
-            .title {
-                font-size: 1.0rem;
-            }
-
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 6px -6px @pop-font-color;
-            }
-        }
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 6px -6px @pop-font-color;
+      }
     }
+  }
 }

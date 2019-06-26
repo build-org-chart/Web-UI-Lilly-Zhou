@@ -138,6 +138,7 @@ table {
   border-spacing: 0;
 }
 .nav-header-container {
+  z-index: 10;
   position: fixed;
   width: 100%;
   padding-top: 2rem;
@@ -160,6 +161,20 @@ table {
   margin: 0px 25px;
   color: #DB6450;
   font-weight: 100;
+}
+.nav-header-container button {
+  padding: 8px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  background-color: #DB6450;
+  border-radius: 5px;
+  border: none;
+  margin: 0px 25px;
+}
+.nav-header-container button:hover {
+  color: #DB6450;
+  background-color: white;
+  border: 1px solid #DB6450;
 }
 @media (max-width: 500px) {
 }
@@ -198,6 +213,20 @@ table {
     margin: 4rem auto;
   }
 }
+.how-to {
+  background-color: #f9e7e4;
+  position: relative;
+}
+.how-to::before {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 100%;
+  background-color: #f9e7e4;
+  left: -50%;
+  z-index: -1;
+  top: 0;
+}
 .how-to p {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -223,7 +252,7 @@ table {
   font-weight: bold;
   font-size: 2.5rem;
   margin-right: 1rem;
-  font-family: 'Abril Fatface', serif;
+  font-family: "Abril Fatface", serif;
   line-height: 1;
 }
 .team h1 {
@@ -294,8 +323,9 @@ body {
   box-sizing: border-box;
   min-width: 300px;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 .container {
   padding: 8rem 12rem;
