@@ -390,8 +390,13 @@ section {
     padding: 0.5rem;
   }
 }
+.team .cards-container .card .img-container {
+  margin: 0 auto;
+  width: 80%;
+}
 .team .cards-container .card .img-container img {
   width: 100%;
+  border-radius: 50%;
 }
 @media (max-width: 800px) {
   .team .cards-container .card .img-container img {
