@@ -30,7 +30,7 @@
 
 .login-button {
   .button(white, @pop-font-color);
-  margin: 0px 25px;
+  margin: 0px 20px;
 }
 
 .nav-links {
@@ -38,9 +38,13 @@
     margin: 0px 25px;
     color: @pop-font-color;
     font-weight: 100;
+
+    @media @tablet {
+      margin: 0px 10px;
+    }
   }
 
-  @media @tablet {
+  @media @mobile {
     display: none;
   }
 }
@@ -51,6 +55,10 @@
   margin: 0 auto;
   display: none;
   float: right;
+
+  @media @mobile {
+    padding-bottom: 1.4rem;
+  }
 
   .menu-button {
     margin: 0 auto;
@@ -69,7 +77,7 @@
     display: none;
   }
 
-  @media @tablet {
+  @media @mobile {
     display: flex;
   }
 }

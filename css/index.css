@@ -153,6 +153,9 @@ body {
     padding: 8rem 2rem;
   }
 }
+.container-menu-adjusted {
+  padding-top: 18rem;
+}
 a {
   text-decoration: none;
   transition: all 0.5s ease;
@@ -208,7 +211,7 @@ section {
   background-color: #DB6450;
   border-radius: 5px;
   border: none;
-  margin: 0px 25px;
+  margin: 0px 20px;
 }
 .login-button:hover {
   color: #DB6450;
@@ -221,6 +224,11 @@ section {
   font-weight: 100;
 }
 @media (max-width: 800px) {
+  .nav-links a {
+    margin: 0px 10px;
+  }
+}
+@media (max-width: 500px) {
   .nav-links {
     display: none;
   }
@@ -233,6 +241,11 @@ section {
   margin: 0 auto;
   display: none;
   float: right;
+}
+@media (max-width: 500px) {
+  .menu {
+    padding-bottom: 1.4rem;
+  }
 }
 .menu .menu-button {
   margin: 0 auto;
@@ -252,7 +265,7 @@ section {
 .menu .menu-links-close {
   display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .menu {
     display: flex;
   }
