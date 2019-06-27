@@ -485,6 +485,18 @@ section {
 .how-to .steps .carousel .right-button:hover {
   background-color: #d7513b;
 }
+@media (max-width: 800px) {
+  .how-to .steps .carousel .left-button {
+    position: absolute;
+    left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .how-to .steps .carousel .right-button {
+    position: absolute;
+    right: 0;
+  }
+}
 .how-to .steps .carousel img {
   width: 90%;
   display: none;
