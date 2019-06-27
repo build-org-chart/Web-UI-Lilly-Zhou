@@ -158,7 +158,8 @@ body {
 }
 a {
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
+  color: #DB6450;
 }
 a:hover {
   transform: scale(0.9);
@@ -212,6 +213,8 @@ section {
   background-color: #DB6450;
   border-radius: 5px;
   border: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
   margin: 0px 10px;
 }
 .login-button:hover {
@@ -242,7 +245,6 @@ section {
   margin: 0 auto;
   display: none;
   float: right;
-  transition: ease all 1s;
 }
 @media (max-width: 800px) {
   .menu {
@@ -254,6 +256,7 @@ section {
   background-color: #DB6450;
   border-radius: 20%;
   cursor: pointer;
+  transition: ease all 1s;
 }
 .menu .nav-links {
   display: flex;
@@ -480,10 +483,11 @@ section {
   width: 40px;
   padding: 15px;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 .how-to .steps .carousel .left-button:hover,
 .how-to .steps .carousel .right-button:hover {
-  background-color: #d7513b;
+  background-color: #DB6450;
 }
 @media (max-width: 800px) {
   .how-to .steps .carousel .left-button {
