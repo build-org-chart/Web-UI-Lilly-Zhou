@@ -146,6 +146,7 @@ body {
 }
 .container {
   padding: 8rem 12rem;
+  overflow: hidden;
 }
 @media (max-width: 800px) {
   .container {
