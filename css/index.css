@@ -193,8 +193,9 @@ section {
   margin: 10px 20px 10px 30px;
   animation: bounce-left 1s both;
   margin-left: 8rem;
+  transition: ease all 1s;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .nav-logo {
     width: 40%;
     margin: 0 auto;
@@ -211,7 +212,7 @@ section {
   background-color: #DB6450;
   border-radius: 5px;
   border: none;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 .login-button:hover {
   color: #DB6450;
@@ -228,7 +229,7 @@ section {
     margin: 0px 10px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .nav-links {
     display: none;
   }
@@ -241,8 +242,9 @@ section {
   margin: 0 auto;
   display: none;
   float: right;
+  transition: ease all 1s;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .menu {
     padding-bottom: 1.4rem;
   }
@@ -265,7 +267,7 @@ section {
 .menu .menu-links-close {
   display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .menu {
     display: flex;
   }

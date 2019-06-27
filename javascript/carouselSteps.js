@@ -1,3 +1,4 @@
+// Not as good way as Henry's
 // class Steps {
 //   constructor(step) {
 //     // STEP LIST ELEMENTS
