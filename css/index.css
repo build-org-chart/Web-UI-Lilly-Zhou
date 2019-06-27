@@ -175,7 +175,6 @@ section {
   position: fixed;
   width: 100%;
   padding-top: 1.4rem;
-  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -200,15 +199,21 @@ section {
   animation: bounce-left 1s both;
   margin-left: 8rem;
 }
+@media (max-width: 500px) {
+  .nav-header-container .nav-logo {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
 .nav-header-container .nav-logo img {
   width: 100%;
 }
-.nav-header-container a {
+.nav-header-container .nav-links a {
   margin: 0px 25px;
   color: #DB6450;
   font-weight: 100;
 }
-.nav-header-container .login-button {
+.nav-header-container .nav-links .login-button {
   font-size: 1.6rem;
   padding: 8px;
   font-family: "Raleway", sans-serif;
@@ -218,43 +223,47 @@ section {
   border: none;
   margin: 0px 25px;
 }
-.nav-header-container .login-button:hover {
+.nav-header-container .nav-links .login-button:hover {
   color: #DB6450;
   background-color: white;
   border: 1px solid #DB6450;
 }
-.nav-header-container .btn-hover {
-  animation: btn-glow 300ms forwards;
-}
-.nav-header-container .btn-leave {
-  animation: btn-glow-reverse 400ms;
-}
-@keyframes btn-glow {
-  0% {
-    box-shadow: 0 0 0 #DB6450;
-  }
-  40% {
-    box-shadow: 0 0 0.5rem #DB6450;
-  }
-  60% {
-    box-shadow: 0 0 0.7rem #DB6450;
-  }
-  100% {
-    box-shadow: 0 0 1rem #DB6450;
+@media (max-width: 800px) {
+  .nav-header-container .nav-links {
+    display: none;
   }
 }
-@keyframes btn-glow-reverse {
-  0% {
-    box-shadow: 0 0 1rem #DB6450;
-  }
-  40% {
-    box-shadow: 0 0 0.7rem #DB6450;
-  }
-  60% {
-    box-shadow: 0 0 0.5rem #DB6450;
-  }
-  100% {
-    box-shadow: 0 0 0 #DB6450;
+.nav-header-container .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  display: none;
+  float: right;
+}
+.nav-header-container .menu .menu-button {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #DB6450;
+  border-radius: 20%;
+  cursor: pointer;
+}
+.nav-header-container .menu .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-header-container .menu .menu-links-open {
+  display: flex;
+}
+.nav-header-container .menu .menu-links-close {
+  display: none;
+}
+@media (max-width: 800px) {
+  .nav-header-container .menu {
+    display: block;
   }
 }
 @-webkit-keyframes bounce-left {

@@ -51,7 +51,7 @@ class Carousel {
     this.carousel = carousel
     this.carouselSteps = Array.from(this.carousel.querySelectorAll(".step")).map((step, index) => new CarouselSteps(step, this, index))
     this.selected = 0
-    console.log(this.carousel)
+    // console.log(this.carousel)
     
     // this.carouselImages = this.carousel.querySelector(".carousel")
     this.leftButton = this.carousel.querySelector(".left-button")
@@ -82,7 +82,6 @@ class CarouselSteps {
     this.step = carouselStep
     this.index = index
     this.stepData = this.step.dataset.step
-    console.log(this.stepData) // "1", "2", "3"
     this.carouselImage = carousel.carousel.querySelector(`img[data-step="${this.stepData}"]`) // not searching doc, but searching parent element forimage with same step data
     this.step.addEventListener("click", ()=> carousel.selectStep(this))
   }
