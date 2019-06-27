@@ -223,7 +223,39 @@ section {
   background-color: white;
   border: 1px solid #DB6450;
 }
-@media (max-width: 500px) {
+.nav-header-container .btn-hover {
+  animation: btn-glow 300ms forwards;
+}
+.nav-header-container .btn-leave {
+  animation: btn-glow-reverse 400ms;
+}
+@keyframes btn-glow {
+  0% {
+    box-shadow: 0 0 0 #DB6450;
+  }
+  40% {
+    box-shadow: 0 0 0.5rem #DB6450;
+  }
+  60% {
+    box-shadow: 0 0 0.7rem #DB6450;
+  }
+  100% {
+    box-shadow: 0 0 1rem #DB6450;
+  }
+}
+@keyframes btn-glow-reverse {
+  0% {
+    box-shadow: 0 0 1rem #DB6450;
+  }
+  40% {
+    box-shadow: 0 0 0.7rem #DB6450;
+  }
+  60% {
+    box-shadow: 0 0 0.5rem #DB6450;
+  }
+  100% {
+    box-shadow: 0 0 0 #DB6450;
+  }
 }
 @-webkit-keyframes bounce-left {
   0% {

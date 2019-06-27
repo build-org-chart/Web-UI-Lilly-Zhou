@@ -21,6 +21,10 @@
     }
   }
 
+  // .nav-links {
+    
+  // }
+
   a {
     margin: 0px 25px;
     color: @pop-font-color;
@@ -32,8 +36,21 @@
     margin: 0px 25px;
   }
 
-  @media @mobile {
-    // Turn anchor tag elements items into hamburger menu
+  .btn-hover { animation: btn-glow 300ms forwards;}
+
+  .btn-leave { animation: btn-glow-reverse 400ms;}
+
+  @keyframes btn-glow {
+    0% {box-shadow: 0 0 0 @pop-font-color;}
+    40% {box-shadow: 0 0 .5rem @pop-font-color;}
+    60% {box-shadow: 0 0 .7rem @pop-font-color;}
+    100% {box-shadow: 0 0 1rem @pop-font-color;}
+  }
+  @keyframes btn-glow-reverse {
+    0% {box-shadow: 0 0 1rem @pop-font-color;}
+    40% {box-shadow: 0 0 .7rem @pop-font-color;}
+    60% {box-shadow: 0 0 .5rem @pop-font-color;}
+    100% {box-shadow: 0 0 0 @pop-font-color;}
   }
 
   /* ----------------------------------------------

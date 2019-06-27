@@ -1,12 +1,19 @@
-// class Navbar {
-//     constructor(navbar) {
-//         this.navbar = navbar
-//         this.logo = this.navbar.querySelector(".nav-logo")
-//         this.anchorTag = this.navbar.querySelectorAll("a")
-//         this.loginButton = this.navbar.querySelector(".login-button")
-//         console.log(this.loginButton);
-//         this.loginButton.addEventListener("click", )
-//     }
-// }
+let button = document.querySelector("button");
+console.log(button);
 
-// const navbar = new Navbar(document.querySelector(".nav-header-container"))
+let glow = () => {
+  console.log("glow!");
+  button.classList.add("btn-hover");
+  button.classList.remove("btn-leave");
+  console.log(button.classList);
+};
+
+let unglow = () => {
+  console.log("unglow!");
+  button.classList.add("btn-leave");
+  button.classList.remove("btn-hover");
+  console.log(button.classList);
+};
+
+button.addEventListener("mouseover", glow);
+button.addEventListener("mouseout", unglow);

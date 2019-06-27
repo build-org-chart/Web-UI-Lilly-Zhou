@@ -50,7 +50,6 @@ class Carousel {
   constructor(carousel) {
     this.carousel = carousel
     this.carouselSteps = Array.from(this.carousel.querySelectorAll(".step")).map((step, index) => new CarouselSteps(step, this, index))
-    
     this.selected = 0
     console.log(this.carousel)
     
@@ -66,7 +65,7 @@ class Carousel {
     this.carouselSteps[this.selected].deselectStep() // deselected current step
     step.selectStep() //selected this step. not with index 0, however
     this.selected = step.index // points to newly selected step
-    console.log(step);
+    // console.log(step);
 
   }
   selectNext() {
