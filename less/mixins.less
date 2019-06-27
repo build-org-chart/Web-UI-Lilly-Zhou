@@ -4,3 +4,19 @@
     align-items: @align-items;
     flex-direction: @direction;
 }
+
+.button(@font-color, @background-color) {
+    font-size: 1.6rem;
+    padding: 8px;
+    font-family: @raleway;
+    color: @font-color;
+    background-color: @background-color;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+        color: @background-color;
+        background-color: @font-color;
+        border: 1px solid @background-color;
+    }
+}

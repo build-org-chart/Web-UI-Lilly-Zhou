@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    // font-family: 'Roboto', sans-serif;
+    font-family: @raleway;
+    color: @main-font;
+}
+
+body {
+	box-sizing: border-box;
+	min-width: 300px;
+    margin: 0;
+    font-size: 1.8rem;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+.container {
+    padding: 8rem 12rem;
+
+    @media @tablet {
+        padding: 8rem 2rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}
+
+h1 {
+    font-size: 3.3rem;
+
+}
+
+section {
+    width: 100%;
+    margin: 10px;
+    .flex(space-between, center, row);
+}
+

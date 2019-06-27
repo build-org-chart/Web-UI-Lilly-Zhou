@@ -139,11 +139,11 @@ table {
   justify-content: center;
   align-items: center;
 }
-.nav-header-container .streemly-nav-logo {
+.nav-header-container .nav-logo {
   width: 20%;
   margin: 10px;
 }
-.nav-header-container .streemly-nav-logo img {
+.nav-header-container .nav-logo img {
   width: 100%;
 }
 .nav-header-container a {

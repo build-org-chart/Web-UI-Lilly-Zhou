@@ -15,62 +15,80 @@
       href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface"
+      rel="stylesheet"
+    />
+
+    <!-- <script src="./javascript/navigation.js" async></script> -->
+    <script src="./javascript/carouselSteps.js" async></script>
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!-- NAVBAR HEADER-->
     <nav class="nav-header-container">
-      <div class="streemly-nav-logo">
+      <div class="nav-logo">
         <img src="./img/logo.png" />
       </div>
       <a href="#">Home</a>
-      <a href="#product">Product Guide</a>
+      <a href="#how-to">Product Guide</a>
       <a href="#team">Team</a>
+      <button class="login-button">Log In</button>
     </nav>
 
     <!-- MAIN CONTENT -->
     <div class="container home">
-      <!-- MISSION -->
-      <section class="product" id="product">
+      <!-- HIGH LEVEL OVERVIEW/MISSION -->
+      <section class="product">
         <div class="product-text">
           <h1>Org Chart</h1>
           <p>
-            Create and manage all employee requests within a <br />
-            single workflow. No more wasted time tracking down <br />
-            important requests lost in emails and spreadsheets.
+            Create and manage all employee requests within a single workflow. No
+            more wasted time tracking down important requests lost in emails and
+            spreadsheets.
           </p>
         </div>
         <div class="product-image">
-          <img src="./img/org-chart.svg" />
+          <img src="./img/career_dev.svg" />
         </div>
       </section>
 
-      <!-- PRODUCT HOW TO -->
-      <section class="how-to">
-        <!-- Potentially turn into carousel -->
-
-        <div class="how-to-text">
-          <h1>How To</h1>
-          <p>
-            Making all those little fluffies that live in the clouds. That is
-            when you can experience true joy, when you have no fear. It is a lot
-            of fun. Anyone can paint. Use what happens naturally, don't fight
-            it. Zip. That easy. How do you make a round circle with a square
-            knife? That's your challenge for the day. Let's put some happy
-            little bushes on the other side now. Trees grow in all kinds of
-            ways. They're not all perfectly straight. Not every limb is perfect.
-          </p>
+      <!-- PRODUCT WALKTHROUGH -->
+      <div class="how-to">
+        <h1 id="how-to">Use Our App</h1>
+        <p>
+          Making all those little fluffies that live in the clouds. That is when
+          you can experience true joy, when you have no fear. It is a lot of
+          fun. Anyone can paint. Use what happens naturally, don't fight it.
+          Zip. That easy. How do you make a round circle with a square knife?
+          That's your challenge for the day. Let's put some happy little bushes
+          on the other side now. Trees grow in all kinds of ways. They're not
+          all perfectly straight. Not every limb is perfect.
+        </p>
+        <div class="steps">
           <ol class="steps-list">
-            <li class="step">
+            <li class="step active-step" data-step="1">
               Go to Google's web app store and install the Org Chart extension.
             </li>
-            <li class="step">
+            <li class="step" data-step="2">
               Create profile by entering your general employee information.
             </li>
-            <li class="step">Submit a request to the appropriate party.</li>
+            <li class="step" data-step="3">
+              Submit a request to the appropriate party.
+            </li>
           </ol>
+          <div class="carousel">
+            <div class="left-button"><</div>
+            <img class="active-img" data-step="1" src="./img/web_dev.svg"/>
+            <img data-step="2" src="./img/noted.svg"/>
+            <img data-step="3" src="./img/segment_analysis.svg"/>
+            <div class="right-button">></div>
+          </div>
         </div>
-      </section>
+      </div>
+      <!--END WALKTHROUGH-->
 
+      <!-- ANOTHER MARKETING HEADER -->
       <section class="product">
         <div class="product-image">
           <img src="./img/inspection.svg" />
@@ -88,25 +106,13 @@
         </div>
       </section>
 
-      <!-- TABS COMPONENT -->
-      <!-- <section class="tabs">
-            <div class="team">
-                <span class="title">Team:</span>
-                <div data-tab="all" class="tab active-tab">All</div>
-                <div data-tab="team-lead" class="tab">Team Lead</div>
-                <div data-tab="ui" class="tab">UI</div>
-                <div data-tab="front-end" class="tab">Front end</div>
-                <div data-tab="back-end" class="tab">Back end</div>
-            </div>
-        </!-->
-
       <!-- CARDS COMPONENTS -->
       <div class="team" id="team">
         <h1>The Team</h1>
         <div class="cards-container">
           <div class="card" data-tab="ui">
             <div class="img-container">
-              <img src="./img/noted.svg" />
+              <img src="./img/anthony.png" />
             </div>
             <div class="card-info">
               <p class="name">Anthony Piazza</p>
@@ -115,7 +121,7 @@
           </div>
           <div class="card" data-tab="ui">
             <div class="img-container">
-              <img src="./img/noted.svg" />
+              <img src="./img/dwayne.png" />
             </div>
             <div class="card-info">
               <p class="name">Dwayne Pearson</p>
@@ -124,7 +130,7 @@
           </div>
           <div class="card" data-tab="ui">
             <div class="img-container">
-              <img src="./img/noted.svg" />
+              <img src="./img/hamidou.png" />
             </div>
             <div class="card-info">
               <p class="name">Hamidou Diallo</p>
@@ -133,7 +139,7 @@
           </div>
           <div class="card" data-tab="ui">
             <div class="img-container">
-              <img src="./img/noted.svg" />
+              <img src="./img/lily.png" />
             </div>
             <div class="card-info">
               <p class="name">Lily Zhou</p>
@@ -142,7 +148,7 @@
           </div>
           <div class="card" data-tab="ui">
             <div class="img-container">
-              <img src="./img/noted.svg" />
+              <img src="./img/thomas.png" />
             </div>
             <div class="card-info">
               <p class="name">Thomas Hessburg</p>
@@ -151,8 +157,9 @@
           </div>
         </div>
       </div>
+      <!--END TEAM-->
     </div>
-
+    <!--END MAIN CONTAINER-->
     <!-- FOOTER -->
     <footer>
       <div class="contact"></div>
