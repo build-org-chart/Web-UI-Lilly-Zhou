@@ -235,7 +235,6 @@ section {
   float: right;
 }
 .menu .menu-button {
-  width: 100%;
   margin: 0 auto;
   background-color: #DB6450;
   border-radius: 20%;
@@ -255,7 +254,7 @@ section {
 }
 @media (max-width: 800px) {
   .menu {
-    display: block;
+    display: flex;
   }
 }
 /* ----------------------------------------------
