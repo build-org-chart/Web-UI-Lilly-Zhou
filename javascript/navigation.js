@@ -17,8 +17,15 @@ let menuToggle = () => {
     container.classList.toggle("container-menu-adjusted")
 }
 
+let hamburgerTime = () => {
+    hamburgerButton.src = "./img/burger.jpg"
+    hamburgerButton.width = "55"
+    hamburgerButton.height = "55"
+}
+
 const hamburgerButton = document.querySelector(".menu-button")
 const menuLinks = document.querySelector(".menu .nav-links")
 hamburgerButton.addEventListener("click", menuToggle)
+hamburgerButton.addEventListener("drag", hamburgerTime)
 // hamburgerButton.addEventListener("mouseover", menuOpen)
 // hamburgerButton.addEventListener("mouseout", menuClose)
