@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
 
-    <!-- <script src="./javascript/navigation.js" async></script> -->
+    <script src="./javascript/navigation.js" async></script>
     <script src="./javascript/carouselSteps.js" async></script>
   </head>
   <body>
@@ -30,10 +30,21 @@
       <div class="nav-logo">
         <img src="./img/logo.png" />
       </div>
-      <a href="#">Home</a>
-      <a href="#how-to">Product Guide</a>
-      <a href="#team">Team</a>
-      <button class="login-button">Log In</button>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#how-to">Product</a>
+        <a href="#team">Team</a>
+        <button class="login-button">Log In</button>
+      </div>
+      <div class="menu">
+        <img class="menu-button" src="./img/menu.png" />
+        <div class="nav-links menu-links-close">
+          <a href="#">Home</a>
+          <a href="#how-to">Product Guide</a>
+          <a href="#team">Team</a>
+          <button class="login-button">Log In</button>
+        </div>
+      </div>
     </nav>
 
     <!-- MAIN CONTENT -->
@@ -79,9 +90,9 @@
           </ol>
           <div class="carousel">
             <div class="left-button"><</div>
-            <img class="active-img" data-step="1" src="./img/web_dev.svg"/>
-            <img data-step="2" src="./img/noted.svg"/>
-            <img data-step="3" src="./img/segment_analysis.svg"/>
+            <img class="active-img" data-step="1" src="./img/web_dev.svg" />
+            <img data-step="2" src="./img/noted.svg" />
+            <img data-step="3" src="./img/segment_analysis.svg" />
             <div class="right-button">></div>
           </div>
         </div>

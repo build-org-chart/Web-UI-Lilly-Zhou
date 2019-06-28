@@ -22,15 +22,20 @@ body {
 
 .container {
     padding: 8rem 12rem;
-
+    overflow: hidden;
     @media @tablet {
         padding: 8rem 2rem;
     }
 }
 
+.container-menu-adjusted {
+    padding-top: 18rem;
+}
+
 a {
     text-decoration: none;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
+    color: @pop-font-color;
 
     &:hover {
         transform: scale(0.9);
